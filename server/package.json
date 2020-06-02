@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev --no-notify --transpileOnly src/server.ts",
-    "db:migrate": "ts-node-dev src/database/migrations",
-    "db:migrate:drop": "yarn ts-node src/database/migrations --drop"
+    "db:create-tables": "ts-node-dev src/database/tableCreation",
+    "db:drop-tables": "yarn ts-node src/database/tableCreation --drop"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
