@@ -4,7 +4,7 @@ export default {
   async create() {
     await pg.query(`CREATE TABLE IF NOT EXISTS points(
         id serial PRIMARY KEY,
-        image varchar(255) NOT NULL,
+        image varchar(255),
         name varchar(255) NOT NULL,
         email varchar(255) NOT NULL,
         whatsapp varchar(255) NOT NULL,

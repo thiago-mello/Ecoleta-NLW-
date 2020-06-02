@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --no-notify --transpileOnly src/server.ts",
+    "dev": "ts-node-dev --ignore-watch node_modules --no-notify --transpileOnly src/server.ts",
     "db:create-tables": "ts-node-dev src/database/tableCreation",
     "db:drop-tables": "yarn ts-node src/database/tableCreation --drop"
   },

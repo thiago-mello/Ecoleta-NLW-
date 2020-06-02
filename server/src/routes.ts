@@ -1,9 +1,11 @@
 import { Router } from 'express';
+import ItemController from './app/controllers/ItemController';
+import PointController from './app/controllers/PointController';
 
 const routes = Router();
 
-routes.get('/', (req, res) => {
-  return res.send('Hello World');
-});
+routes.get('/items', ItemController.index);
+
+routes.post('/points', PointController.store);
 
 export default routes;

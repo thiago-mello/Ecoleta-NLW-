@@ -1,5 +1,6 @@
 import 'dotenv/config';
 import express, { Express } from 'express';
+import { resolve } from 'path';
 import routes from './routes';
 
 class App {
@@ -13,6 +14,10 @@ class App {
   }
 
   async middlewares() {
+    this.server.use(
+      '/assets',
+      express.static(resolve(__dirname, '..', 'assets'))
+    );
     this.server.use(express.json());
   }
 
@@ -21,4 +26,4 @@ class App {
   }
 }
 
-new App().server.listen(3000, () => console.log('Listening on port 3000'));
+new App().server.listen(5000, () => console.log('Listening on port 5000'));
