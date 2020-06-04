@@ -6,8 +6,8 @@ export default {
         id serial PRIMARY KEY,
         point_id integer NOT NULL,
         item_id integer NOT NULL,
-        FOREIGN KEY (point_id)  REFERENCES points(id),
-        FOREIGN KEY (item_id)  REFERENCES items(id)
+        FOREIGN KEY (point_id)  REFERENCES points(id) ON DELETE CASCADE,
+        FOREIGN KEY (item_id)  REFERENCES items(id) ON DELETE CASCADE
       );`);
     console.log('Created table point_items');
   },
