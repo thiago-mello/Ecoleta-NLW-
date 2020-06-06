@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import background from '../../assets/home-background.svg';
 
 export const Container = styled.div`
@@ -63,7 +64,7 @@ export const Main = styled.main`
   }
 `;
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   width: 100%;
   max-width: 360px;
   height: 72px;

@@ -18,7 +18,7 @@ const Home: FunctionComponent = () => {
             Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
           </p>
 
-          <Button href="/cadastro">
+          <Button to="/cadastro">
             <span>
               <FiLogIn />
             </span>
